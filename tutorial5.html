@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJs Basic</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-app="" ng-init="names=[
+{'name':'Chet','country':'Thailand','salary':'26,0000'},
+{'name':'Za','country':'Lao','salary':'27,0000'},
+{'name':'Ekk','country':'Malaysia','salary':'28,0000'},
+]">
+<div class="container">
+	<div class="col-sm-12"><h2>Angular Filter</h2></div>
+	<div class="col-sm-5">
+      <input type="filter" class="form-control" ng-model="queryString" id="filter" placeholder="filter by">
+    </div>
+    <div class="col-sm-10">
+    <br>
+		<table class="table table-bordered ">
+			<tr>
+				<th>Name</th>
+				<th>Country</th>
+				<th>Salary</th>
+			</tr>
+			<tr ng-repeat="n in names | filter:queryString">
+				<td>{{ n.name }}</td>
+				<td>{{ n.country }}</td>
+				<td>{{ n.salary }}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</body>
+</html>

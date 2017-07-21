@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>tutorial1</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div ng-app="" class="container">
+        <h1>Table for AngularJs</h1>
+        <div class="row" ng-init="names =[
+        {'name':'Neng','country':'Thailand','salary':15000},
+        {'name':'Geng','country':'Thailand','salary':25000},
+        {'name':'Chet','country':'Thailand','salary':35000},
+        {'name':'Mate','country':'Thailand','salary':45000},
+        ]">
+        	<table class="table table-bordered">
+        		<tr>
+        			<th>Name</th>
+        			<th>Country</th>
+        			<th>Salary</th>
+        		</tr>
+        		<tr ng-repeat="n in names">
+        			<td>{{ n.name }}</td>
+        			<td>{{ n.country }}</td>
+        			<td>{{ n.salary }}</td>
+        		</tr>
+        	</table>
+        </div>
+    </div>
+</body>
+
+</html>

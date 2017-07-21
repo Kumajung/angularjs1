@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AngularJs Insert Data</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container" style="width: 500px;">
+        <h3 align="center">Insert Data - AngularJs</h3>
+        <div ng-app="myApp" ng-controller="usercontroller" ng-init="displayData()">
+            <label>FirstName : </label>
+            <input type="text" name="fName" ng-model="fName" class="form-control">
+            <label>LastName : </label>
+            <input type="text" name="lName" ng-model="lName" class="form-control">
+            <br/>
+            <input type="submit" name="btnInsert" class="btn btn-info" value="{{ btnName }}" ng-click="insertData()">
+            <br><br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tr ng-repeat="x in names">
+                    <td>{{ x.id }}</td>
+                    <td>{{ x.fname }}</td>
+                    <td>{{ x.lname }}</td>
+                    <td><button class="btn btn-info btn-xs" ng-click="updateData(x.id,x.fname,x.lname)">Update</button></td>
+                    <td><button class="btn btn-danger btn-xs" ng-click="deleteData(x.id)">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap-sweetalert/dist/sweetalert.css">
+
+</html>

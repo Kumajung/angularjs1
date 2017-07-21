@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>tutorail 2</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-init="price=10;quality=2">
+<div class="container">
+<h2>AngularJS</h2>
+	LEGO Price :<input type="number" class="form-control" ng-model="price" placeholder="Price" >
+	Quality : <input type="number" class="form-control" ng-model="quality" placeholder="quality">
+	<p>Total Price {{ price*quality }} Baht</p>
+</div>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</body>
+</html>

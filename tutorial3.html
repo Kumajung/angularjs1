@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>tutorail 2</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-init="names = ['Name01','Name02','Name03']">
+<div class="container">
+<h2>AngularJS</h2>
+	<ul class="list-group" ng-repeat="n in names">
+		<li class="list-group-item">{{ n }}</li>
+	</ul>
+</div>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</body>
+</html>
